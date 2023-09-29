@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-05-movies/static/css/main.d2b6e138.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.1f8014d4.js",
+    "main.css": "/goit-react-hw-05-movies/static/css/main.434fbeef.css",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.dd5254f5.js",
     "static/media/default_image.png": "/goit-react-hw-05-movies/static/media/default_image.08ba4a3915c0ff049252.png",
+    "static/media/dark-night.jpg": "/goit-react-hw-05-movies/static/media/dark-night.971611f03e3d4b3fd67f.jpg",
     "index.html": "/goit-react-hw-05-movies/index.html",
-    "main.d2b6e138.css.map": "/goit-react-hw-05-movies/static/css/main.d2b6e138.css.map",
-    "main.1f8014d4.js.map": "/goit-react-hw-05-movies/static/js/main.1f8014d4.js.map"
+    "main.434fbeef.css.map": "/goit-react-hw-05-movies/static/css/main.434fbeef.css.map",
+    "main.dd5254f5.js.map": "/goit-react-hw-05-movies/static/js/main.dd5254f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2b6e138.css",
-    "static/js/main.1f8014d4.js"
+    "static/css/main.434fbeef.css",
+    "static/js/main.dd5254f5.js"
   ]
 }
