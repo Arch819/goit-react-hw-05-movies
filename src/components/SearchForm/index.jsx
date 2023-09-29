@@ -1,4 +1,13 @@
+import { AiOutlineSearch } from 'react-icons/ai';
 import { useSearchParams } from 'react-router-dom';
+import {
+  FormLabel,
+  InputSearch,
+  NameInput,
+  SearchFormBox,
+  SearchFormStyled,
+  SubmitFormBtn,
+} from './SearchForm.styled';
 
 const SearchForm = ({ setMovieSearch }) => {
   const [search, setSearch] = useSearchParams();
@@ -15,19 +24,24 @@ const SearchForm = ({ setMovieSearch }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        <span>Search Movie</span>
-        <input
-          onChange={handleChange}
-          type="text"
-          name="movie"
-          autoFocus
-          value={query}
-        />
-      </label>
-      <button type="submit">Search</button>
-    </form>
+    <SearchFormStyled onSubmit={handleSubmit}>
+      <SearchFormBox>
+        <FormLabel>
+          <InputSearch
+            onChange={handleChange}
+            type="text"
+            name="movie"
+            autoFocus
+            value={query}
+            placeholder="Search movie"
+          />
+          <NameInput>Search Movie</NameInput>
+        </FormLabel>
+        <SubmitFormBtn type="submit">
+          <AiOutlineSearch />
+        </SubmitFormBtn>
+      </SearchFormBox>
+    </SearchFormStyled>
   );
 };
 export default SearchForm;

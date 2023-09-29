@@ -1,3 +1,5 @@
+import { Container, Section } from 'components/App.styled';
+import ErrorMessage from 'components/ErrorMessage';
 import { Loader } from 'components/Loader/Loader';
 import MoviesList from 'components/MoviesList';
 import SearchForm from 'components/SearchForm';
@@ -34,12 +36,16 @@ const MoviesPage = () => {
   }, [fetchSearchMovies, movieSearch]);
 
   return (
-    <section>
-      <SearchForm setMovieSearch={setMovieSearch} />
-      {isLoading && <Loader />}
-      {isError && !isLoading && <h1>Error</h1>}
-      {movies && <MoviesList moviesList={movies.results} />}
-    </section>
+    <main>
+      <Section>
+        <Container>
+          <SearchForm setMovieSearch={setMovieSearch} />
+          {isLoading && <Loader />}
+          {isError && !isLoading && <ErrorMessage error={isError} />}
+          {movies && <MoviesList moviesList={movies.results} />}
+        </Container>
+      </Section>
+    </main>
   );
 };
 

@@ -1,5 +1,14 @@
-import { Container } from 'components/App.styled';
+import { Container, Section } from 'components/App.styled';
 import default_image from 'images/default_image.png';
+import {
+  DetailsWrap,
+  MovieDescription,
+  MovieGenres,
+  MovieInfoDetails,
+  MovieScore,
+  MovieTitleDetail,
+  SpanStyled,
+} from './MovieDetailsSection.styled';
 
 const MovieDetailsSection = ({ details }) => {
   const IMAGE_URL = 'https://image.tmdb.org/t/p/w400/';
@@ -9,19 +18,28 @@ const MovieDetailsSection = ({ details }) => {
   const userScore = Math.round((Number(vote_average) * 100) / 10);
   const releaseData = release_date?.slice(0, 4);
   return (
-    <Container>
-      <img src={imageSrc} alt={title} width={400} />
-      <div>
-        <h3>
-          {title}({releaseData})
-        </h3>
-        <p>
-          User Score: <span>{userScore}%</span>
-        </p>
-        <p>Overview {overview}</p>
-        <p>genres: {genres?.map(({ name }) => name).join(' ')}</p>
-      </div>
-    </Container>
+    <Section>
+      <Container>
+        <DetailsWrap>
+          <img src={imageSrc} alt={title} width={360} />
+          <MovieInfoDetails>
+            <MovieTitleDetail>
+              {title}({releaseData})
+            </MovieTitleDetail>
+            <MovieScore>
+              <SpanStyled>User Score:</SpanStyled> <span>{userScore}%</span>
+            </MovieScore>
+            <MovieDescription>
+              <SpanStyled>Overview:</SpanStyled> {overview}
+            </MovieDescription>
+            <MovieGenres>
+              <SpanStyled>Genres:</SpanStyled>{' '}
+              {genres?.map(({ name }) => name).join(' / ')}
+            </MovieGenres>
+          </MovieInfoDetails>
+        </DetailsWrap>
+      </Container>
+    </Section>
   );
 };
 

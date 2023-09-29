@@ -1,4 +1,5 @@
 import { Section } from 'components/App.styled';
+import ErrorMessage from 'components/ErrorMessage';
 import { Loader } from 'components/Loader/Loader';
 import TrendingMovies from 'components/TrendingMovies';
 import { useEffect, useState } from 'react';
@@ -27,11 +28,13 @@ const HomePage = () => {
   }, [movies]);
 
   return (
-    <Section>
-      {movies && <TrendingMovies movies={movies} />}
-      {isError && <h1>{isError}</h1>}
-      {isLoading && <Loader />}
-    </Section>
+    <main>
+      <Section>
+        {movies && <TrendingMovies movies={movies} />}
+        {isError && <ErrorMessage error={isError} />}
+        {isLoading && <Loader />}
+      </Section>
+    </main>
   );
 };
 

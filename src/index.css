@@ -23,7 +23,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #1f1f1f;
+  background-image: linear-gradient(#1f1f1f,
+      #1f1f1fb5), url(./images/dark-night.jpg);
+  background-color: #1f1f1f;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 code {
@@ -54,4 +59,16 @@ h3,
 p {
   margin: 0;
   padding: 0;
+}
+
+main {
+  position: relative;
+  padding-top: 80px;
+  min-height: calc(100vh - 100px);
+  /* background-image: linear-gradient(#1f1f1f,
+      #1f1f1fb5), url(./images/dark-night.jpg);
+  background-color: #1f1f1f;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
 }

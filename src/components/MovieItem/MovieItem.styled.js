@@ -5,8 +5,6 @@ export const MovieItemStyled = styled('li')({
   position: 'relative',
   overflow: 'hidden',
 
-  transition:
-    'transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),boxShadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1)',
   '&::after': {
     position: 'absolute',
     left: '0',
@@ -18,19 +16,19 @@ export const MovieItemStyled = styled('li')({
     background: '#f00',
     transition: 'transform 250ms cubic-bezier(0.4, 0, 0.2, 1)',
   },
-
-  '&:is(:hover,:focus)': {
-    transform: 'scale(1.02)',
-
+  '&:hover': {
     '&::after': {
       transform: 'translateX(0%)',
     },
   },
-
+  'a:is(:hover,:focus) ': {
+    transform: 'scale(1.02)',
+  },
   '& a': {
     display: 'block',
     width: '100%',
     height: '100%',
+    transition: 'transform 250ms cubic-bezier(0.4, 0, 0.2, 1)',
   },
 });
 

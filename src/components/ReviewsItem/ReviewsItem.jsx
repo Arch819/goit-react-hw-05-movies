@@ -1,3 +1,11 @@
+import {
+  ReviewsItemAuthor,
+  ReviewsItemContent,
+  ReviewsItemPublicReview,
+  ReviewsItemRating,
+  ReviewsItemStyled,
+  ReviewsItemTextBox,
+} from 'components/Reviews/Reviews.styled';
 import defaultPhoto from 'images/defaultPhoto.jpg';
 
 const ReviewsItem = ({ review }) => {
@@ -9,15 +17,15 @@ const ReviewsItem = ({ review }) => {
   const publicReview = `${updated_at.slice(0, 10)} ${updated_at.slice(11, 19)}`;
   console.log(review);
   return (
-    <>
-      <img src={imageSrc} alt={author} />
-      <p>{rating}</p>
-      <div>
-        <h3>{author}</h3>
-        <p>{content}</p>
-        <p>{publicReview}</p>
-      </div>
-    </>
+    <ReviewsItemStyled>
+      <img src={imageSrc} alt={author} width={100} height={100} />
+      <ReviewsItemTextBox>
+        <ReviewsItemRating>{rating}</ReviewsItemRating>
+        <ReviewsItemAuthor>{author}</ReviewsItemAuthor>
+        <ReviewsItemContent>{content}</ReviewsItemContent>
+        <ReviewsItemPublicReview>{publicReview}</ReviewsItemPublicReview>
+      </ReviewsItemTextBox>
+    </ReviewsItemStyled>
   );
 };
 
