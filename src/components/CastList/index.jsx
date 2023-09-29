@@ -1,4 +1,4 @@
-import CastItem from 'components/CastItem/CastItem';
+import CastItem from 'components/CastItem';
 import { CastListStyled } from '../Cast/Cast';
 
 const CastList = ({ cast: { cast } }) => {

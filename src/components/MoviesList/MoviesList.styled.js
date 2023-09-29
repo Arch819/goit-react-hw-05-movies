@@ -5,5 +5,5 @@ export const MoviesListStyled = styled('ul')({
   flexWrap: 'wrap',
   gap: '40px 60px',
   alignItems: 'start',
-  justifyContent: 'center',
+  justifyContent: 'space-evenly',
 });

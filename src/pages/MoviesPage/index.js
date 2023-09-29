@@ -1,6 +1,6 @@
 import { Container, Section } from 'components/App.styled';
 import ErrorMessage from 'components/ErrorMessage';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'components/Loader';
 import MoviesList from 'components/MoviesList';
 import SearchForm from 'components/SearchForm';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';

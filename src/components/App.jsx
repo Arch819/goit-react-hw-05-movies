@@ -3,7 +3,7 @@ import MoviesPage from 'pages/MoviesPage';
 import { Route, Routes } from 'react-router-dom';
 import Cast from './Cast';
 import Reviews from './Reviews';
-import SharedLayout from './SharedLayout/SharedLayout';
+import SharedLayout from './SharedLayout';
 import MovieDetailsPage from 'pages/MovieDetailsPage';
 
 export const App = () => {

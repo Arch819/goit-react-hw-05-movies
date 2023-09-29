@@ -1,7 +1,6 @@
 const { default: styled } = require('styled-components');
 export const SearchFormStyled = styled('form')({
   marginBottom: '40px',
-  paddingTop: '20px',
 });
 export const SearchFormBox = styled('div')({
   display: 'flex',

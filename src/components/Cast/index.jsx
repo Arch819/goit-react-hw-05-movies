@@ -1,7 +1,7 @@
 import { Container } from 'components/App.styled';
 import CastList from 'components/CastList';
 import ErrorMessage from 'components/ErrorMessage';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'components/Loader';
 import { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getDetailsCast } from 'services/fetchMovies';

@@ -1,9 +1,10 @@
+import Logo from 'components/Logo';
 import { FooterStyled } from './Footer.styled';
 
 const Footer = () => {
   return (
     <FooterStyled>
-      <h1>Footer</h1>
+      <Logo />
     </FooterStyled>
   );
 };

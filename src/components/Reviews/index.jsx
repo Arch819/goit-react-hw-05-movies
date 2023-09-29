@@ -1,7 +1,7 @@
 import { Container } from 'components/App.styled';
 import ErrorMessage from 'components/ErrorMessage';
-import { Loader } from 'components/Loader/Loader';
-import ReviewsList from 'components/ReviewsList/ReviewsList';
+import { Loader } from 'components/Loader';
+import ReviewsList from 'components/ReviewsList';
 import React, { useEffect, useState } from 'react';
 import { useCallback } from 'react';
 import { useParams } from 'react-router-dom';
@@ -31,7 +31,6 @@ const Reviews = () => {
 
   useEffect(() => {
     fetchReviews(movieId);
-    console.log('fetch');
   }, [fetchReviews, movieId]);
 
   return (

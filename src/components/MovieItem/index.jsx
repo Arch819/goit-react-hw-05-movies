@@ -16,7 +16,6 @@ const MovieItem = ({ movie }) => {
   const maxLength = 16;
   const titleMovie = title || name;
 
-  console.log(titleMovie);
   return (
     <MovieItemStyled title={title}>
       <Link to={`/movies/${id}`} state={{ from: location }}>

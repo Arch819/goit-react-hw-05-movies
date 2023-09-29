@@ -5,17 +5,36 @@ import { getDetailsMovie } from 'services/fetchMovies';
 import MovieDetailsSection from 'components/MovieDetailsSection';
 import { Section } from 'components/App.styled';
 import AdditionalInfo from 'components/AdditionalInfo';
+import { Loader } from 'components/Loader';
+import ErrorMessage from 'components/ErrorMessage';
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [detailsMovie, setDetailsMovie] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    getDetailsMovie(movieId).then(data => setDetailsMovie(data));
-  }, [movieId]);
+    if (detailsMovie) return;
+    const getDetails = async movieId => {
+      try {
+        setIsError(false);
+        setIsLoading(true);
+        const getMovieDetails = await getDetailsMovie(movieId);
+        setDetailsMovie(getMovieDetails);
+      } catch ({ message }) {
+        setIsError(message);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    getDetails(movieId);
+  }, [detailsMovie, movieId]);
 
   return (
     <main>
       <ButtonBack />
+      {isError && <ErrorMessage error={isError} />}
+      {isLoading && <Loader />}
       {detailsMovie && <MovieDetailsSection details={detailsMovie} />}
       <Section>
         <AdditionalInfo />

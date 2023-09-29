@@ -1,6 +1,6 @@
 import { Section } from 'components/App.styled';
 import ErrorMessage from 'components/ErrorMessage';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'components/Loader';
 import TrendingMovies from 'components/TrendingMovies';
 import { useEffect, useState } from 'react';
 import { getPopularMovies } from 'services/fetchMovies';

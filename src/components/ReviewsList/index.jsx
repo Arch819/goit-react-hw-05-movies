@@ -1,5 +1,5 @@
 import { ReviewsListStyled } from 'components/Reviews/Reviews.styled';
-import ReviewsItem from 'components/ReviewsItem/ReviewsItem';
+import ReviewsItem from 'components/ReviewsItem';
 import React from 'react';
 
 const ReviewsList = ({ reviews }) => {

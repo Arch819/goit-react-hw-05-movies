@@ -15,7 +15,6 @@ const ReviewsItem = ({ review }) => {
   const imageSrc = avatar_path ? IMAGE_URL + avatar_path : defaultPhoto;
 
   const publicReview = `${updated_at.slice(0, 10)} ${updated_at.slice(11, 19)}`;
-  console.log(review);
   return (
     <ReviewsItemStyled>
       <img src={imageSrc} alt={author} width={100} height={100} />

@@ -14,9 +14,11 @@ export const MovieLink = styled(Link)({
   borderRadius: '8px',
   background: '#0f0f0ff1',
   color: '#aeaeae',
-  transition: 'color 250ms cubic-bezier(0.4, 0, 0.2, 1)',
+  transition:
+    'color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1)',
 
   '&:hover': {
+    transform: 'scale(1.1)',
     color: '#f1f1f1',
   },
 });
