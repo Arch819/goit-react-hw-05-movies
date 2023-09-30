@@ -3,7 +3,7 @@ import { MoviesListStyled } from './MoviesList.styled';
 
 const MoviesList = ({ moviesList }) => {
   return (
-    <MoviesListStyled>
+    <MoviesListStyled className="galleryWrapp">
       {moviesList.map(movie => (
         <MovieItem key={movie.id} movie={movie} />
       ))}

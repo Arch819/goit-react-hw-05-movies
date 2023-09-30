@@ -1,12 +1,14 @@
-import ButtonBack from 'components/ButtonBack';
 import { useEffect, useState } from 'react';
 import { Outlet, useParams } from 'react-router-dom';
 import { getDetailsMovie } from 'services/fetchMovies';
-import MovieDetailsSection from 'components/MovieDetailsSection';
+import ButtonBack from 'components/ButtonBack';
 import { Section } from 'components/App.styled';
-import AdditionalInfo from 'components/AdditionalInfo';
 import { Loader } from 'components/Loader';
+
+import MovieDetailsSection from 'components/MovieDetailsSection';
+import AdditionalInfo from 'components/AdditionalInfo';
 import ErrorMessage from 'components/ErrorMessage';
+
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [detailsMovie, setDetailsMovie] = useState(null);
